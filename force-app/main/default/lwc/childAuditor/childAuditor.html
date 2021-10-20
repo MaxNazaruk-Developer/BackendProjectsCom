@@ -1,0 +1,19 @@
+<template>
+    <div class="container-component">
+        <div class="attached-in-container-component">
+            <div class="box-title">
+                <h6>Child Auditor</h6>
+            </div>
+            <div class="box-list">        
+                <ol> 
+                    <template for:each={listRelation} for:item="object">
+                        <li key={object.relationshipName}><p>{object.relationshipName}: {object.quantity} records</p></li>
+                    </template>
+                </ol>        
+            </div>
+            <div class="box-button">
+                <button class="slds-button slds-button_brand buttom-refrech" onclick={clickButtonRefrech}>Refresh</button>
+            </div>
+        </div>
+    </div>
+</template>
